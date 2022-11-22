@@ -16,7 +16,7 @@ h1{
     gap: 1rem;
 }
 
-.box, input{
+.box, input, .number0{
     display: flex;
     justify-content: center;
     align-items: center;
