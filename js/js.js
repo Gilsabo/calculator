@@ -2,8 +2,8 @@ const allClear = document.querySelector('[data-all-clear');
 const numbers = document.querySelectorAll('[data-number]');
 const previousDisplay= document.querySelector('[data-previous-number-display]');
 const currentDisplay = document.querySelector('[data-current-number-display]');
-const decimal = document.querySelector('[data-number]');
 const clear = document.querySelector('[data-clear]');
+const decimal=document.querySelector('[data-decimal]')
 const equals = document.querySelector('[data-equal]');
 const op = document.querySelectorAll('[data-operator]');
 
@@ -11,8 +11,6 @@ const op = document.querySelectorAll('[data-operator]');
 let currentNumber='';
 let previousNumber='';
 let operator ='';
-
-
 
 
 allClear.addEventListener('click', ()=>{
@@ -23,6 +21,7 @@ allClear.addEventListener('click', ()=>{
     previousDisplay.innerText ='';
 });
 
+
 clear.addEventListener('click', ()=>{
    currentDisplay.innerText = currentDisplay.innerText.slice(0,-1);
    currentNumber=currentDisplay.innerText
@@ -32,19 +31,26 @@ clear.addEventListener('click', ()=>{
 
 numbers.forEach(item => {
     item.addEventListener('click', (e) => { 
-    number(currentNumber)
+    if(currentNumber.length>10){
+        return 
+     }
+    
     currentNumber +=  e.target.textContent;
     currentDisplay.innerText = currentNumber;
-    
 
-   
+    
     })
   });
 
-  function number(num){
-    if(num.length<5)
- return num
-  }
+  decimal.addEventListener('click', (e)=>{
+    
+    if(currentNumber.includes('.')){
+return
+    }
+    currentDisplay.innerText+=e.target.textContent
+    currentNumber +=  e.target.textContent
+  });
+  
 
   op.forEach(item => {
     item.addEventListener('click', (e)=>{
@@ -63,7 +69,6 @@ function operate(){
     if(operator==='+'){
         const result = Number(currentNumber) + Number(previousNumber);
         previousNumber='';
-        
         currentNumber=result;
         previousDisplay.innerText =previousNumber;
         currentDisplay.innerText = result;
