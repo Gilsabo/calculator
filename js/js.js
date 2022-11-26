@@ -45,10 +45,11 @@ numbers.forEach(item => {
   decimal.addEventListener('click', (e)=>{
     
     if(currentNumber.includes('.')){
-return
+        return
     }
-    currentDisplay.innerText+=e.target.textContent
+    
     currentNumber +=  e.target.textContent
+    currentDisplay.innerText+=e.target.textContent
   });
   
 
