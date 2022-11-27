@@ -31,7 +31,7 @@ clear.addEventListener('click', ()=>{
 
 numbers.forEach(item => {
     item.addEventListener('click', (e) => { 
-    if(currentNumber.length>10){
+    if(currentNumber.length>12){
         return 
      }
     
