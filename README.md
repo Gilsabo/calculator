@@ -1,5 +1,5 @@
 # Project Title
-JavaScript Calculator
+Javascript Calculator
 
 ## Description
 This is a calculator built using JavaScript. It performs basic arithmetic operations such as addition, subtraction, multiplication, and division. If you need to [calculate]( https://gilsabo.github.io/calculator/) your gas and heating bills, this project might help you
