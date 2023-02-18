@@ -11,7 +11,7 @@ This is a calculator built using JavaScript. It performs basic arithmetic operat
 ## Technologies Used
 HTML
 CSS
-JavaScript
+Javascript
 ## I learned :
 - Debugging and problem-solving
 - Styling with background gradient
