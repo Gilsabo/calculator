@@ -12,7 +12,7 @@ This is a calculator built using Javascript. It performs basic arithmetic operat
 - HTML
 - CSS
 - Javascript
-## I learned :
+## I learned
 - Debugging and problem-solving
 - Styling with background gradient
 - Handling user input with event listeners
